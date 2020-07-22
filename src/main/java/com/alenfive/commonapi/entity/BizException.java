@@ -7,11 +7,11 @@ public class BizException extends RuntimeException {
     /**
      * 业务异常错误码
      */
-    private String code;
+    private final String code;
     /**
      * 错误描述
      */
-    private String message;
+    private final String message;
 
     public BizException(String code, String message) {
         super(message);
@@ -37,8 +37,8 @@ public class BizException extends RuntimeException {
     @Override
     public String toString() {
         return "BizException{" +
-                "code='" + code + '\'' +
-                ", message='" + message + '\'' +
-                '}';
+               "code='" + code + '\'' +
+               ", message='" + message + '\'' +
+               '}';
     }
 }

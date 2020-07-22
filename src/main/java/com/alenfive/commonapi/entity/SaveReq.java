@@ -22,13 +22,13 @@ public class SaveReq implements Serializable {
 
     /**
      * {
-     *   "account":"test",
-     *   "title":爆炸额",
-     *   "pic":"http://www.baidu.com",
-     *   "remark":"发动机佛大姐夫",
-     *   "content":"内容"
+     * "account":"test",
+     * "title":爆炸额",
+     * "pic":"http://www.baidu.com",
+     * "remark":"发动机佛大姐夫",
+     * "content":"内容"
      * }
      * 存储对象
      */
-    private Map<String,Object> saveObj;
+    private Map<String, Object> saveObj;
 }

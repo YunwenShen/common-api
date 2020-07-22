@@ -28,6 +28,6 @@ public class CommonApiProperties {
     private Map<String, List<String>> blackTableFieldList;
 
     public Map<String, List<String>> getBlackTableFieldList() {
-        return blackTableFieldList == null? Collections.EMPTY_MAP:blackTableFieldList;
+        return blackTableFieldList == null ? Collections.EMPTY_MAP : blackTableFieldList;
     }
 }

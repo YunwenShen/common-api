@@ -24,7 +24,7 @@ public class CommonController {
                         @PathVariable("table") String table,
                         @PathVariable("resultType") QueryReq.ResultType resultType) {
 
-        if (queryReq == null){
+        if (queryReq == null) {
             queryReq = new QueryReq();
         }
         queryReq.setTable(table);
@@ -35,7 +35,7 @@ public class CommonController {
 
     @PostMapping("/{table}")
     public void save(@PathVariable("table") String table,
-                       @RequestBody Map<String,Object> saveObj){
+                     @RequestBody Map<String, Object> saveObj) {
         SaveReq saveReq = new SaveReq();
         saveReq.setTable(table);
         saveReq.setSaveObj(saveObj);
@@ -44,14 +44,14 @@ public class CommonController {
 
     @PutMapping("/{table}")
     public void update(@PathVariable("table") String table,
-                     @RequestBody UpdateReq updateReq){
+                       @RequestBody UpdateReq updateReq) {
         updateReq.setTable(table);
         commonService.update(updateReq);
     }
 
     @DeleteMapping("/{table}")
     public void delete(@PathVariable("table") String table,
-                       @RequestBody UpdateReq updateReq){
+                       @RequestBody UpdateReq updateReq) {
         updateReq.setTable(table);
         commonService.delete(updateReq);
     }

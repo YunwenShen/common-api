@@ -11,19 +11,19 @@ import org.springframework.context.annotation.Configuration;
 public class CommonApiAutoConfig {
     @Bean
     @ConditionalOnMissingBean
-    public CommonController getCommonController(){
+    public CommonController getCommonController() {
         return new CommonController();
     }
 
     @Bean
     @ConditionalOnMissingBean
-    public CommonService getCommonService(){
+    public CommonService getCommonService() {
         return new CommonService();
     }
 
     @Bean
     @ConditionalOnMissingBean
-    public CommonMapper getCommonMapper(){
+    public CommonMapper getCommonMapper() {
         return new CommonMapper();
     }
 

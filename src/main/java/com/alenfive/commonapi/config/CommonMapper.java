@@ -12,33 +12,32 @@ import java.util.Map;
 @Repository
 public class CommonMapper {
 
+    private final String listFieldSql = "select COLUMN_NAME from information_schema.columns where table_name='%s' and table_schema=database()";
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    private final String listFieldSql = "select COLUMN_NAME from information_schema.columns where table_name='%s' and table_schema=database()";
-
-    List<Map<String, Object>> query(String sql){
+    List<Map<String, Object>> query(String sql) {
         return jdbcTemplate.queryForList(sql);
     }
 
-    Long count(String sql){
-        return jdbcTemplate.queryForObject(sql,Long.class);
+    Long count(String sql) {
+        return jdbcTemplate.queryForObject(sql, Long.class);
     }
 
-    List<String> listField(String table){
-        String sql = String.format(listFieldSql,table);
-        return jdbcTemplate.queryForList(sql,String.class);
+    List<String> listField(String table) {
+        String sql = String.format(listFieldSql, table);
+        return jdbcTemplate.queryForList(sql, String.class);
     }
 
-    void save(String sql){
+    void save(String sql) {
         jdbcTemplate.execute(sql);
     }
 
-    Integer update(String sql){
+    Integer update(String sql) {
         return jdbcTemplate.update(sql);
     }
 
-    public void delete(String sql){
+    public void delete(String sql) {
         jdbcTemplate.execute(sql);
     }
 }

@@ -8,7 +8,7 @@ public enum ErrorCode {
     , PARAM_ERROR(10001)//参数问题
     , FORMAT_ERROR(10011) //格式化异常
     ;
-    private Integer code;
+    private final Integer code;
 
     ErrorCode(Integer code) {
         this.code = code;
